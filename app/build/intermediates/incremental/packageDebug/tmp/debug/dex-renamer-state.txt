@@ -1,0 +1,7 @@
+#Tue Dec 17 22:47:43 EET 2019
+base.0=D\:\\P\\Android\\Kotlin\\AmiralBatti\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\P\\Android\\Kotlin\\AmiralBatti\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ship_screen"
+    tools:context=".GameActivity">
+
+    <Button
+        android:id="@+id/btn_ship"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ship1"
+        app:layout_constraintTop_toTopOf="@+id/btn_ship1"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship1"
+        android:layout_width="135dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/layout_left"
+        app:layout_constraintTop_toTopOf="@+id/layout_left"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship2"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toStartOf="@+id/btn_ship"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ship"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship3"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship2"
+        app:layout_constraintTop_toTopOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship4"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship3"
+        app:layout_constraintTop_toTopOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship5"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/btn_ship2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship6"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship5"
+        app:layout_constraintTop_toTopOf="@+id/btn_ship5"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship7"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship6"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship8"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship7"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_ship9"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ship3"
+        android:onClick="selectShipOnClick"
+        app:layout_constraintStart_toEndOf="@+id/btn_ship8"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ship2"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_Volume"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/volume_on"
+        android:onClick="volumeOnOff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_revolve_ship"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/revolve_button"
+        android:clickable="false"
+        android:onClick="revolveShip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_remove_ship"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/remove"
+        android:clickable="false"
+        android:onClick="removeShip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_revolve_ship"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_gameStart"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/btn_layout"
+        android:clickable="false"
+        android:fontFamily="monospace"
+        android:onClick="gameStartClick"
+        android:text="@string/play"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove_ship"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_positonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="monospace"
+        android:text="@string/gemi_pozisyonu"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/img_ShipState"
+        app:layout_constraintStart_toEndOf="@+id/layout_left" />
+
+    <ImageView
+        android:id="@+id/img_ShipState"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ship3"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_left" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_left"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_mapbtn0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn0"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn1"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn2"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn4"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn6"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn7"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn8"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn9"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn10"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn0" />
+
+        <Button
+            android:id="@+id/btn_mapbtn12"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn6" />
+
+        <Button
+            android:id="@+id/btn_mapbtn13"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn0"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn14"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn1"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn15"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn2"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn16"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn3"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn17"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn4"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn18"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn6"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn7"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn21"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn20"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn22"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn21"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn23"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn22"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn12" />
+
+        <Button
+            android:id="@+id/btn_mapbtn24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn18" />
+
+        <Button
+            android:id="@+id/btn_mapbtn25"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn6"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn26"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn7"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn27"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn20"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn28"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn21"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn29"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn22"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn30"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn24" />
+
+        <Button
+            android:id="@+id/btn_mapbtn31"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn6"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn30" />
+
+        <Button
+            android:id="@+id/btn_mapbtn32"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn7"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn30" />
+
+        <Button
+            android:id="@+id/btn_mapbtn33"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn20"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn30" />
+
+        <Button
+            android:id="@+id/btn_mapbtn34"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn21"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn30" />
+
+        <Button
+            android:id="@+id/btn_mapbtn35"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:clickable="false"
+            android:onClick="myMapOnClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn22"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_right"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_mapbtn36"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn37"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn38"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn39"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn40"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn41"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_mapbtn42"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn36" />
+
+        <Button
+            android:id="@+id/btn_mapbtn43"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn44"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn45"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn46"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn47"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn48"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn42" />
+
+        <Button
+            android:id="@+id/btn_mapbtn49"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn50"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn51"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn52"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn53"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn54"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn55"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn56"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn57"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn58"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn59"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn48" />
+
+        <Button
+            android:id="@+id/btn_mapbtn60"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn54" />
+
+        <Button
+            android:id="@+id/btn_mapbtn61"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn62"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn63"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn64"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn65"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn66"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mapbtn60" />
+
+        <Button
+            android:id="@+id/btn_mapbtn67"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn36"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn66" />
+
+        <Button
+            android:id="@+id/btn_mapbtn68"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn37"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn66" />
+
+        <Button
+            android:id="@+id/btn_mapbtn69"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn38"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn66" />
+
+        <Button
+            android:id="@+id/btn_mapbtn70"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn39"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn66" />
+
+        <Button
+            android:id="@+id/btn_mapbtn71"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gameboardbtn_darksea"
+            android:onClick="enemyBoardClick"
+            app:layout_constraintStart_toEndOf="@+id/btn_mapbtn40"
+            app:layout_constraintTop_toTopOf="@+id/btn_mapbtn66" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_notificationTable"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fadeScrollbars="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:isScrollContainer="false"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Volume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

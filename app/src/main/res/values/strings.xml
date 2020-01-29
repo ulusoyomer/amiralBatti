@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AmiralBatti</string>
+    <string name="singleplayer">SINGLEPLAYER</string>
+    <string name="multiplayer">MULTIPLAYER</string>
+    <string name="todo">TODO</string>
+    <string name="play">Play</string>
+    <string name="gemi_pozisyonu">Gemi Pozisyonu</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_textDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="185dp"
+        android:fontFamily="serif-monospace"
+        android:text="Cihaz Adı :"
+        android:textColor="@color/GhostWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_DeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/GhostWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_textDeviceName"
+        app:layout_constraintTop_toTopOf="@+id/tv_textDeviceName" />
+
+    <TextView
+        android:id="@+id/tv_textDeviceAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif-monospace"
+        android:text="Cihaz Adresi:"
+        android:textColor="@color/GhostWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_textDeviceName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_textDeviceName" />
+
+    <TextView
+        android:id="@+id/tv_DeviceAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/GhostWhite"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_textDeviceAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_DeviceName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adapter_ship_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
